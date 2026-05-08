@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Municipalidad de Cholchol | Inicio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#inicio">Municipalidad de Cholchol</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Abrir menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Municipio
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#noticias">Noticias</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#contacto">Contacto</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#servicios">Trámites municipales</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#noticias">Noticias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <form id="searchForm" class="d-flex ms-lg-3" role="search">
+                        <input id="searchInput" class="form-control me-2" type="search" placeholder="Buscar"
+                            aria-label="Buscar" />
+                        <button class="btn btn-outline-light" type="submit">
+                            Buscar
+                        </button>
+                    </form>
+
+                    <button id="contrastBtn" class="btn btn-warning ms-lg-3 mt-3 mt-lg-0" type="button">
+                        Alto contraste
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero d-flex align-items-center">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <span class="badge text-bg-warning mb-3">Portal ciudadano</span>
+                        <h1>Municipalidad de Cholchol al servicio de la comunidad</h1>
+                        <p>
+                            Accede a información municipal, servicios, noticias y canales de
+                            contacto desde una plataforma clara, moderna y accesible.
+                        </p>
+
+                        <a href="#servicios" class="btn btn-primary btn-lg">Ver servicios</a>
+                        <a href="#contacto" class="btn btn-outline-light btn-lg ms-lg-2 mt-2 mt-lg-0">Contactar</a>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="hero-card">
+                            <h2>Accesos rápidos</h2>
+                            <div class="row g-3 mt-3">
+                                <div class="col-6">
+                                    <button class="quick-card" type="button">
+                                        Permiso circulación
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="quick-card" type="button">
+                                        Transparencia
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="quick-card" type="button">
+                                        Concejo municipal
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button class="quick-card" type="button">
+                                        Solicitudes
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="quickResult" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Servicios municipales</h2>
+                    <p>Selecciona un servicio para revisar información general.</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card municipal-card h-100 service-card" data-service="Trámites municipales">
+                            <div class="card-body">
+                                <h5 class="card-title">Trámites municipales</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">
+                                    Atención ciudadana
+                                </h6>
+                                <p class="card-text">
+                                    Acceso a solicitudes, pagos y documentación comunal.
+                                </p>
+                                <button class="btn btn-outline-primary btn-sm" type="button">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card municipal-card h-100 service-card" data-service="Direcciones municipales">
+                            <div class="card-body">
+                                <h5 class="card-title">Direcciones municipales</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">
+                                    Oficinas y unidades
+                                </h6>
+                                <p class="card-text">
+                                    Información sobre departamentos, oficinas y horarios de
+                                    atención.
+                                </p>
+                                <button class="btn btn-outline-primary btn-sm" type="button">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card municipal-card h-100 service-card" data-service="Participación ciudadana">
+                            <div class="card-body">
+                                <h5 class="card-title">Participación ciudadana</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">
+                                    Comunidad activa
+                                </h6>
+                                <p class="card-text">
+                                    Encuestas, actividades y canales de comunicación vecinal.
+                                </p>
+                                <button class="btn btn-outline-primary btn-sm" type="button">
+                                    Ver detalle
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="serviceDetail" class="alert alert-info mt-4 d-none" role="alert"></div>
+            </div>
+        </section>
+
+        <section id="noticias" class="section bg-light">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Noticias destacadas</h2>
+                    <p>Información relevante para vecinos y vecinas de Cholchol.</p>
+                </div>
+
+                <div id="newsContainer" class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card municipal-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Becas municipales</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">
+                                    Educación
+                                </h6>
+                                <p class="card-text">
+                                    Apoyo municipal para estudiantes de educación superior.
+                                </p>
+                                <a href="#contacto" class="card-link">Consultar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card municipal-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Retiro de ramas</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">
+                                    Operaciones
+                                </h6>
+                                <p class="card-text">
+                                    Información sobre retiro programado en distintos sectores.
+                                </p>
+                                <a href="#contacto" class="card-link">Más información</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card municipal-card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Concejo municipal</h5>
+                                <h6 class="card-subtitle mb-2 text-body-secondary">
+                                    Transmisiones
+                                </h6>
+                                <p class="card-text">
+                                    Revisa transmisiones y sesiones municipales.
+                                </p>
+                                <a href="#contacto" class="card-link">Ver detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button id="loadNewsBtn" class="btn btn-primary" type="button">
+                        Ver más noticias
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <h2>Contacto municipal</h2>
+                        <p>
+                            Completa el formulario para enviar una solicitud de información.
+                        </p>
+                        <p>
+                            <strong>Dirección:</strong> José Joaquín Pérez 449, Cholchol
+                        </p>
+                        <p><strong>Teléfono:</strong> 452 734200</p>
+                        <p><strong>Email:</strong> oficinadepartes@municholchol.cl</p>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <form id="contactForm" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input id="name" type="text" class="form-control" placeholder="Ingresa tu nombre" />
+                                <small class="feedback"></small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input id="email" type="email" class="form-control" placeholder="correo@ejemplo.cl" />
+                                <small class="feedback"></small>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea id="message" class="form-control" rows="5"
+                                    placeholder="Escribe tu mensaje"></textarea>
+                                <small class="feedback"></small>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Enviar solicitud
+                            </button>
+                            <div id="formResult" class="mt-3"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-1">Municipalidad de Cholchol</p>
+            <small>Portal informativo desarrollado como parte de la evaluación de Desarrollo Frontend 2. Saludos! </small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+:root {
+    --blue: #1456a0;
+    --dark-blue: #0b2f5b;
+    --cyan: #18a8c4;
+    --light: #f5f8fc;
+    --text: #1f2937;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+}
+
+.navbar {
+    background: rgba(11, 47, 91, 0.96);
+    transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: #071f3d;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.navbar .nav-link {
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: #ffc107;
+}
+
+.hero {
+    min-height: 100vh;
+    padding-top: 95px;
+    color: white;
+    background: linear-gradient(135deg, var(--dark-blue), var(--blue), var(--cyan));
+}
+
+.hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 620px;
+}
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+}
+
+.quick-card {
+    width: 100%;
+    min-height: 95px;
+    border: 0;
+    border-radius: 18px;
+    background: white;
+    color: var(--dark-blue);
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.quick-card:hover,
+.quick-card:focus {
+    transform: translateY(-5px);
+    background: #f3f7ff;
+    outline: 3px solid #ffc107;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+
+.section-title h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+
+.municipal-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 22px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    transition: 0.25s ease;
+}
+
+.municipal-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--cyan);
+}
+
+.service-card {
+    cursor: pointer;
+}
+
+.card-title {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.form-control {
+    border-radius: 12px;
+    padding: 12px;
+}
+
+.form-control.is-valid {
+    border-color: #198754;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545;
+}
+
+.feedback {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+.feedback.error {
+    color: #dc3545;
+}
+
+.feedback.success {
+    color: #198754;
+}
+
+.footer {
+    padding: 40px 0;
+    background: var(--dark-blue);
+    color: white;
+}
+
+.high-contrast {
+    background: #000;
+    color: #fff;
+}
+
+.high-contrast .section,
+.high-contrast .bg-light {
+    background: #000 !important;
+    color: #fff;
+}
+
+.high-contrast .card,
+.high-contrast .municipal-card,
+.high-contrast .hero-card {
+    background: #111;
+    color: #fff;
+    border-color: #fff;
+}
+
+.high-contrast h2,
+.high-contrast h3,
+.high-contrast h5,
+.high-contrast .card-title {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        padding-top: 125px;
+    }
+
+    .hero .btn {
+        width: 100%;
+        margin: 8px 0 !important;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+}
